@@ -2,6 +2,8 @@ USE codeup_test_db;
 
 SHOW CREATE TABLE albums;
 
+TRUNCATE albums;
+
 INSERT INTO albums(artist, name, release_date, sales, genre)
 VALUES ('Michael Jackson', 'Thriller', 1982, 49.2, 'Pop, post-disco, funk, rock'),
        ('AC/DC', 'Back in Black', 1980, 29.5, 'Hard rock'),
@@ -34,14 +36,3 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 49.2, 'Pop, post-disco, funk, rock'
        ('Santana', 'Supernatural', 1999, 20.5, 'Latin rock'),
        ('Guns N Roses', 'Appetite for Destruction', 1987, 21.9, 'Hard rock'),
        ('Elton John', 'Goodbye Yellow Brick Road', 1973, 8.5, 'rock, pop rock, glam rock');
-
-SELECT name FROM albums WHERE release_date > 1991;
-DELETE FROM albums WHERE release_date > 1991;
-
-SELECT name FROM albums WHERE genre = 'disco';
-DELETE FROM albums WHERE genre = 'disco';
-
-SELECT name FROM albums WHERE artist = 'Whitney Houston';
-DELETE FROM albums WHERE artist = 'Whitney Houston';
-
-SELECT * FROM albums;
