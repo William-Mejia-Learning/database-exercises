@@ -35,18 +35,13 @@ VALUES ('Michael Jackson', 'Thriller', 1982, 49.2, 'Pop, post-disco, funk, rock'
        ('Guns N Roses', 'Appetite for Destruction', 1987, 21.9, 'Hard rock'),
        ('Elton John', 'Goodbye Yellow Brick Road', 1973, 8.5, 'rock, pop rock, glam rock');
 
-DESCRIBE albums;
+SELECT name FROM albums WHERE release_date > 1991;
+DELETE FROM albums WHERE release_date > 1991;
+
+SELECT name FROM albums WHERE genre = 'disco';
+DELETE FROM albums WHERE genre = 'disco';
+
+SELECT name FROM albums WHERE artist = 'Whitney Houston';
+DELETE FROM albums WHERE artist = 'Whitney Houston';
 
 SELECT * FROM albums;
-
-SELECT name FROM albums WHERE artist = 'Pink Floyd';
-
-SELECT release_date FROM albums WHERE name = 'Sgt.Peppers Lonely Hearts Club Band';
-
-SELECT genre FROM albums WHERE name = 'Nevermind';
-
-SELECT name FROM albums WHERE  release_date BETWEEN 1990 AND 1999;
-
-SELECT name FROM albums WHERE sales < 20.0;
-
-SELECT * FROM albums WHERE genre = 'Rock';
